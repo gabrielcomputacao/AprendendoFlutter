@@ -5,7 +5,11 @@ import 'package:http/http.dart' as http;
 
 class Login with ChangeNotifier {
   Future<void> registrar(String email, String senha) async {
-    final url = Uri.https("authority", "unencodedPath");
+    final url = Uri.https(
+      'identitytoolkit.googleapis.com',
+      '/v1/accounts:signUp',
+      {"key": "AIzaSyB6ddPJk0jJfBE5sPOvTZknu6svj0471Jw"},
+    );
 
     final resposta = await http.post(
       url,
@@ -20,7 +24,11 @@ class Login with ChangeNotifier {
   }
 
   Future<void> realizarLogin(String email, String senha) async {
-    final url = Uri.https("authority", "unencodedPath)");
+    final url = Uri.https(
+      'identitytoolkit.googleapis.com',
+      '/v1/accounts:signInWithPassword',
+      {"key": "AIzaSyB6ddPJk0jJfBE5sPOvTZknu6svj0471Jw"},
+    );
 
     final resposta = await http.post(
       url,

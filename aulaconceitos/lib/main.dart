@@ -1,6 +1,7 @@
 import 'package:aulaconceitos/providers/montadoras_antes_firebase.dart';
 import 'package:aulaconceitos/telas/telaCadastroMontadoras.dart';
 import 'package:aulaconceitos/telas/telaForm.dart';
+import 'package:aulaconceitos/telas/telaLogin.dart';
 import 'package:aulaconceitos/telas/telamontadora.dart';
 import 'package:aulaconceitos/telas/telaveiculos.dart';
 import 'package:aulaconceitos/utils/rotas.dart';
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
             primarySwatch: Colors.blue,
           ),
           routes: {
+            Rotas.AUTH: (context) => TelaLogin(),
             Rotas.HOME: (context) => TelaMontadora(),
             Rotas.CAD_MONTADORAS: (context) => TelaCadastoMontadora(),
             Rotas.FORM_MONTADORA: (context) => TelaFormMontadora(),
