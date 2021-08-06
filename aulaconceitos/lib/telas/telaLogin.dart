@@ -9,8 +9,7 @@ class TelaLogin extends StatelessWidget {
       body: Stack(children: [
         Container(
           decoration: BoxDecoration(
-            gradient:
-                LinearGradient(colors: [Color.fromRGBO(200, 150, 80, 0.5)]),
+            gradient: LinearGradient(colors: [Colors.amberAccent]),
           ),
         ),
         Container(

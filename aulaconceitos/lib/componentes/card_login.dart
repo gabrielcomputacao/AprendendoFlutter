@@ -95,7 +95,16 @@ class _CardLoginState extends State<CardLogin> {
                 decoration: InputDecoration(labelText: "E-email"),
                 keyboardType: TextInputType.emailAddress,
                 validator: (value) {
-                  if (value.isEmpty || value.contains("@")) {
+                  if (value.isEmpty) {
+                    return 'informe';
+                  }
+                },
+              ),
+              TextFormField(
+                decoration: InputDecoration(labelText: "Nome"),
+                keyboardType: TextInputType.emailAddress,
+                validator: (value) {
+                  if (value.isEmpty) {
                     return 'informe';
                   }
                 },
